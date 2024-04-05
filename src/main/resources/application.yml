@@ -1,0 +1,7 @@
+spring:
+    application:
+        name: Custom-Login-Demo
+#    security:
+#        user:
+##            name: user
+##            password: notnull
