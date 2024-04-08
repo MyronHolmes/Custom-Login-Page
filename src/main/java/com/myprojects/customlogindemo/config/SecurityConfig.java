@@ -13,12 +13,10 @@ public class SecurityConfig {
     SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http
                 .formLogin(form->form
-                        .loginPage("/login")
-                        .permitAll())
+                        .loginPage("/login").permitAll())
                 .authorizeHttpRequests(auth->auth
                         .requestMatchers("/images/**").permitAll()
-                        .anyRequest()
-                        .authenticated())
+                        .anyRequest().authenticated())
                 .build();
     }
 }
