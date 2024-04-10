@@ -2,4 +2,6 @@
 spring:
     application:
         name: Custom-Login-Demo
-
+    config:
+      import:
+        - classpath:secrets.yml

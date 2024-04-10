@@ -14,6 +14,9 @@ public class SecurityConfig {
         return http
                 .formLogin(form->form
                         .loginPage("/login").permitAll())
+                .oauth2Login(oA->oA
+                        .loginPage("/login")
+                        .defaultSuccessUrl("/home", true))
                 .authorizeHttpRequests(auth->auth
                         .requestMatchers("/images/**").permitAll()
                         .anyRequest().authenticated())
